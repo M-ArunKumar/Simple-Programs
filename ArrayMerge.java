@@ -1,3 +1,14 @@
+/*
+
+2. Write a program to sort the elements in odd positions in descending order and elements in ascending order
+
+Eg 1: Input: 13,2 4,15,12,10,5
+        Output: 13,2,12,10,5,15,4
+Eg 2: Input: 1,2,3,4,5,6,7,8,9
+        Output: 9,2,7,4,5,6,3,8,1 
+        
+*/
+
 public class ArrayMerge {
     public static void solution(int[] arr1,int[] arr2,int[] arr3, int a1,int a2){
         int i=0,j=0,k=0;
