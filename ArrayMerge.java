@@ -1,11 +1,12 @@
 /*
 
-2. Write a program to sort the elements in odd positions in descending order and elements in ascending order
+5. Given two sorted arrays, merge them such that the elements are not repeated
 
-Eg 1: Input: 13,2 4,15,12,10,5
-        Output: 13,2,12,10,5,15,4
-Eg 2: Input: 1,2,3,4,5,6,7,8,9
-        Output: 9,2,7,4,5,6,3,8,1 
+Eg 1: Input:
+        Array 1: 2,4,5,6,7,9,10,13
+        Array 2: 2,3,4,5,6,7,8,9,11,15
+       Output:
+       Merged array: 2,3,4,5,6,7,8,9,10,11,13,15 
         
 */
 
