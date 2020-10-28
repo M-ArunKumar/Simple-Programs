@@ -59,6 +59,7 @@ public class RemovedInvalidParenthesis {
                 System.out.println(str);
                 level = true;
             }
+            
             if (level)
                 continue;
 
