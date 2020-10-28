@@ -1,3 +1,15 @@
+/*
+
+2) Remove unbalanced parentheses in a given expression.
+
+    Eg.) Input  : ((abc)((de))
+         Output : ((abc)(de))  
+
+         Input  : (((ab)
+         Output : (ab) 
+
+*/
+
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
