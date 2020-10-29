@@ -1,28 +1,48 @@
+/*
+
+ Given a array with n elements print the number of occurrences of that number each number in that array. The order of number doesn’t matter. You can reorder the elements.
+Example : [2,1,3,2,2,5,8,9,8]
+Output:
+2-3
+1-1
+3-1
+5-1
+8-2
+9-1
+
+*/
+
+import java.util.Arrays;
+
 public class NumberOccuranceInArray {
-    void printfrequency(int arr[], int n)
+    public static void countFreq(int arr[], int n)
     {
-        // Subtract 1 from every element so that the elements
-        // become in range from 0 to n-1
-        for (int j = 0; j < n; j++)
-            arr[j] = arr[j] - 1;
+        boolean visited[] = new boolean[n];
 
-        // Use every element arr[i] as index and add 'n' to
-        // element present at arr[i]%n to keep track of count of
-        // occurrences of arr[i]
-        for (int i = 0; i < n; i++)
-            arr[arr[i] % n] = arr[arr[i] % n] + n;
+        Arrays.fill(visited, false);
 
-        // To print counts, simply print the number of times n
-        // was added at index corresponding to every element
-        for (int i = 0; i < n; i++)
-            System.out.println(i + 1 + "->" + arr[i] / n);
+        for (int i = 0; i < n; i++) {
+
+            // Skip this element if already processed
+            if (visited[i] == true)
+                continue;
+
+            // Count frequency
+            int count = 1;
+            for (int j = i + 1; j < n; j++) {
+                if (arr[i] == arr[j]) {
+                    visited[j] = true;
+                    count++;
+                }
+            }
+            System.out.println(arr[i] + "-->" + count);
+        }
     }
 
-    public static void main(String[] args)
+    public static void main(String []args)
     {
-        NumberOccuranceInArray count = new NumberOccuranceInArray();
-        int arr[] = {2, 3, 3, 2, 5};
+        int arr[] = new int[]{2,1,3,2,2,5,8,9,8};
         int n = arr.length;
-        count.printfrequency(arr, n);
+        countFreq(arr, n);
     }
 }
