@@ -43,19 +43,7 @@ public class Petrol_InCar {
 
         for(int i=0; i<petrolbunks; i++)
             arrayCap[i] = in.nextInt();
-
-        for(int i=0; i<petrolbunks; i++)
-            for(int j=i+1; j<petrolbunks; j++)
-                if(arrayDis[i] > arrayDis[j])
-                {
-                    int temp1 = arrayDis[i];
-                    arrayDis[i] = arrayDis[j];
-                    arrayDis[j] = temp1;
-
-                    int temp2 = arrayCap[i];
-                    arrayCap[i] = arrayCap[j];
-                    arrayCap[j] = temp2;
-                }
+       
         int flag = 1;
         for(int i=0; i<petrolbunks; i++)
         {
